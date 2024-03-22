@@ -1,0 +1,392 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Add padding between sections */
+#home,
+#education,
+#experience,
+#skills,
+#projects,
+#contact {
+    padding: 300px 0;
+}
+
+#contact {
+    padding-top: 400px;
+}
+
+
+/* Navigation */
+
+/* Sticky navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px; /* Adjust as needed */
+}
+
+.profile-picture {
+    margin-right: 80px; /* Adjust spacing between picture and description */
+}
+
+.profile-picture img {
+    width: 250px; /* Adjust image size as needed */
+    height: auto;
+    border-radius: 50%; /* Assuming it's a circular profile picture */
+}
+
+.melissa {
+    font-size: 53px;
+}
+
+.description {
+    color: #fff;
+    text-align: left;
+    font-size: 57px;
+}
+
+/* Animation for job title */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* EDUCATION */
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.degrees {
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    align-items: flex-start;
+}
+
+.degree {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.education-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff; /* Circle color */
+    margin-right: 10px;
+    margin-bottom: 45px;
+}
+
+.degree-info {
+    color: #fff;
+}
+
+/* Additional styling */
+.circle::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333; /* Circle border color */
+}
+
+/* EXPERIENCE */
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-listing {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.experience-individual {
+    display: flex; /* Add display flex to make sure circle and info are aligned */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px;
+}
+
+.experience-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.experience-info {
+    color: #fff;
+}
+
+/* Style for the circle */
+.experience-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff; /* Circle color */
+    margin-right: 10px; /* Adjust spacing between circle and text */
+    margin-bottom: 80px;
+}
+
+/* Additional styling */
+.experience-circle::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333; /* Circle border color */
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.skills-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.skill-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skill-category {
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.skill-category:hover {
+    background-color: transparent; /* Change background color on hover */
+}
+
+.skill-category h4 {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+/* Add rectangle effect to each individual skill */
+.skill-category ul li:hover {
+    background-color: #555; /* Change background color on hover */
+    padding: 5px 10px; /* Add padding to make the rectangle effect */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Remove hover effect on the entire section */
+.skill-category:hover ul li:hover  {
+    background-color: transparent; /* Remove background color on hover */
+    padding: 0;
+}
+
+/* Define different colors for each skill category */
+.skill-category:nth-child(odd) ul li:hover {
+    background-color: #ff6347; /* Adjust color as needed */
+}
+
+.skill-category:nth-child(even) ul li:hover {
+    background-color: #4169e1; /* Adjust color as needed */
+}
+
+/* PROJECTS */
+.projects-heading {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.projects .container {
+    text-align: left; /* Align container content to the left */
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+
+/* CONTACT */
+.contact-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.contact {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact h2 {
+    margin: 0;
+}
+
+.contact-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Adjust the size of Font Awesome icons */
+.fa-brands {
+    font-size: 50px; 
+}
+
+.fa-envelope {
+    font-size: 50px;
+}
+
+
+.contact-icons a:first-child {
+    margin-left: 0;
+}
+
+.contact-icons a:hover {
+    color: #555;
+}
+
+
+
+
+
+    
+
+
