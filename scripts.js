@@ -69,17 +69,28 @@ document.getElementById("contact-link").addEventListener("click", function() {
 
 /* Home */
 document.addEventListener('DOMContentLoaded', function () {
-    const jobTitles = ['programmer', 'designer']; // Add more job titles as needed
+    const jobTitleElement = document.getElementById('job-title'); 
+    const jobTitles = ['designer', 'programmer', 'developer']; 
+    const wordColors = ['#FFC374', '#7F9F80', '#124076']
     let currentIndex = 0;
-    const jobTitleElement = document.getElementById('job-title');
+    
 
     setInterval(function () {
         jobTitleElement.style.animation = 'none';
         void jobTitleElement.offsetWidth; // Trigger reflow
         jobTitleElement.style.animation = 'slideIn 0.5s forwards';
 
+        const jobTitleWords = jobTitles[currentIndex].split(' ');
+        let coloredText = '';
+
+        for (let i = 0; i < jobTitleWords.length; i++) {
+            const colorIndex = (i + currentIndex) % wordColors.length; // Ensure each word gets a different color
+            coloredText += `<span class="job-title-word" style="color: ${wordColors[colorIndex]};">${jobTitleWords[i]}</span> `;
+        }
+
+        jobTitleElement.innerHTML = coloredText.trim();
+
         currentIndex = (currentIndex + 1) % jobTitles.length;
-        jobTitleElement.textContent = jobTitles[currentIndex];
-    }, 2000); // Change job title every 2 seconds (adjust as needed)
+    }, 2000); // Change job title every 2 seconds 
 });
 

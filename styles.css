@@ -101,6 +101,11 @@ nav ul li a:hover {
     border-radius: 50%; /* Assuming it's a circular profile picture */
 }
 
+#job-title-container {
+    display: inline-block;
+    width: 150px; /* Adjust the width as needed */
+}
+
 .melissa {
     font-size: 53px;
 }
@@ -258,6 +263,10 @@ nav ul li a:hover {
     margin-left: auto;
 }
 
+.skill-title {
+    color: #7F9F80;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -286,11 +295,11 @@ ul li {
 
 /* Define different colors for each skill category */
 .skill-category:nth-child(odd) ul li:hover {
-    background-color: #ff6347; /* Adjust color as needed */
+    background-color: #FE7A36; /* Adjust color as needed */
 }
 
 .skill-category:nth-child(even) ul li:hover {
-    background-color: #4169e1; /* Adjust color as needed */
+    background-color: #124076; /* Adjust color as needed */
 }
 
 /* PROJECTS */
@@ -380,7 +389,7 @@ ul li {
 }
 
 .contact-icons a:hover {
-    color: #555;
+    color: #FFC374;
 }
 
 
