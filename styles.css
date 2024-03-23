@@ -1,4 +1,3 @@
-
 * {
     margin: 0px;
     padding: 0px;
@@ -31,7 +30,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000;
+    /* Ensure it appears above other content */
     background-color: #333;
     padding: 20px;
     color: #fff;
@@ -76,6 +76,10 @@ nav ul li a:hover {
     background-color: #555;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* HOME */
 .home {
     display: flex;
@@ -88,22 +92,27 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
+    /* Adjust as needed */
 }
 
 .profile-picture {
-    margin-right: 80px; /* Adjust spacing between picture and description */
+    margin-right: 80px;
+    /* Adjust spacing between picture and description */
 }
 
 .profile-picture img {
-    width: 250px; /* Adjust image size as needed */
+    width: 250px;
+    /* Adjust image size as needed */
     height: auto;
-    border-radius: 50%; /* Assuming it's a circular profile picture */
+    border-radius: 50%;
+    /* Assuming it's a circular profile picture */
 }
 
 #job-title-container {
     display: inline-block;
-    width: 150px; /* Adjust the width as needed */
+    width: 150px;
+    /* Adjust the width as needed */
 }
 
 .melissa {
@@ -121,9 +130,17 @@ nav ul li a:hover {
     from {
         transform: translateX(100%);
     }
+
     to {
         transform: translateX(0);
     }
+}
+
+.section-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 50px;
 }
 
 
@@ -137,7 +154,8 @@ nav ul li a:hover {
 
 .degrees {
     display: flex;
-    flex-direction: column; /* Change flex direction to column */
+    flex-direction: column;
+    /* Change flex direction to column */
     align-items: flex-start;
 }
 
@@ -147,35 +165,31 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.education-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: right;
-    padding-right: 50px;
-}
-
-.circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #fff; /* Circle color */
-    margin-right: 10px;
-    margin-bottom: 45px;
-}
-
 .degree-info {
     color: #fff;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align content in a column */
+    align-items: flex-start; /* Align content to the start (left) */
+    padding: 10px; /* Add padding for spacing */
 }
 
-/* Additional styling */
-.circle::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #333; /* Circle border color */
+.college-name {
+    color: #F6995C;
 }
+
+.college-degree {
+    color: #9BB0C1;
+}
+
+.degree-box {
+    border: 1px solid #ccc; /* Add border to the degree box */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    width: 700px; /* Set fixed width */
+    height: 175px; /* Set fixed height */
+    display: flex; /* Use flexbox */
+    margin-bottom: 20px;
+}
+
 
 /* EXPERIENCE */
 .experience {
@@ -186,25 +200,35 @@ nav ul li a:hover {
 
 .experience-listing {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
 }
 
 .experience-individual {
-    display: flex; /* Add display flex to make sure circle and info are aligned */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    /* Add display flex to make sure circle and info are aligned */
+    align-items: center;
+    /* Align items vertically */
     margin-bottom: 10px;
-}
-
-.experience-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: right;
-    padding-right: 50px;
 }
 
 .experience-info {
     color: #fff;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+}
+
+.job-location, .job-title {
+    color: #C7DCA7;
+}
+
+/* Box around each job */
+.experience-box {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* You can adjust the border radius to control the roundness of the corners */
+    padding: 20px; /* Add padding to create space between the content and the border */
+    margin-bottom: 20px; /* Add margin between each box */
 }
 
 /* Style for the circle */
@@ -212,9 +236,20 @@ nav ul li a:hover {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #fff; /* Circle color */
-    margin-right: 10px; /* Adjust spacing between circle and text */
-    margin-bottom: 80px;
+    background-color: white; /* Circle color */
+    margin-right: 10px;  /* Adjust spacing between circle and text */
+    margin-bottom: 200px;
+}
+
+.experience-circle-second {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* Circle color */
+    margin-right: 10px;
+    /* Adjust spacing between circle and text */
+    margin-bottom: 269px; 
 }
 
 /* Additional styling */
@@ -224,8 +259,19 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #333; /* Circle border color */
+    background-color: white;
+    /* Circle border color */
 }
+
+.experience-circle-second::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+}
+
 
 /* SKILLS */
 .skills {
@@ -233,13 +279,6 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-}
-
-.skills-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: right;
-    padding-right: 50px;
 }
 
 .skill-categories {
@@ -251,11 +290,15 @@ nav ul li a:hover {
 .skill-category {
     border: 1px solid #fff;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 125px;
+    border-radius: 5px;
 }
 
 .skill-category:hover {
-    background-color: transparent; /* Change background color on hover */
+    background-color: transparent;
+    /* Change background color on hover */
 }
 
 .skill-category h4 {
@@ -276,41 +319,41 @@ ul {
 ul li {
     display: inline-block;
     margin-right: 10px;
-    
+
 }
 
 /* Add rectangle effect to each individual skill */
 .skill-category ul li:hover {
-    background-color: #555; /* Change background color on hover */
-    padding: 5px 10px; /* Add padding to make the rectangle effect */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #555;
+    /* Change background color on hover */
+    padding: 5px 5px;
+    /* Add padding to make the rectangle effect */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
 }
 
 /* Remove hover effect on the entire section */
-.skill-category:hover ul li:hover  {
-    background-color: transparent; /* Remove background color on hover */
+.skill-category:hover ul li:hover {
+    background-color: transparent;
+    /* Remove background color on hover */
     padding: 0;
 }
 
 /* Define different colors for each skill category */
 .skill-category:nth-child(odd) ul li:hover {
-    background-color: #FE7A36; /* Adjust color as needed */
+    background-color: #FE7A36;
+    /* Adjust color as needed */
 }
 
 .skill-category:nth-child(even) ul li:hover {
-    background-color: #124076; /* Adjust color as needed */
+    background-color: #124076;
+    /* Adjust color as needed */
 }
+
 
 /* PROJECTS */
-.projects-heading {
-    color: #fff;
-    font-size: 50px;
-    margin-bottom: 20px;
-    text-align: right;
-    padding-right: 50px;
-}
-
 .projects {
     display: flex;
     flex-direction: column;
@@ -319,7 +362,8 @@ ul li {
 }
 
 .projects .container {
-    text-align: left; /* Align container content to the left */
+    text-align: left;
+    /* Align container content to the left */
 }
 
 .card {
@@ -327,6 +371,25 @@ ul li {
     border-radius: 5px;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Align content in a column */
+    text-align: center; /* Center text horizontally */
+    background-color: #7BD3EA;
+}
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.card .card-body .card-title {
+    margin-bottom: 0; /* Remove default margin */
 }
 
 .card:hover {
@@ -334,11 +397,19 @@ ul li {
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 3px black;
+    font-weight: bold;
+    padding-bottom: 5px;
 }
 
 .card-text {
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
 }
 
 
@@ -376,7 +447,7 @@ ul li {
 
 /* Adjust the size of Font Awesome icons */
 .fa-brands {
-    font-size: 50px; 
+    font-size: 50px;
 }
 
 .fa-envelope {
@@ -391,11 +462,3 @@ ul li {
 .contact-icons a:hover {
     color: #FFC374;
 }
-
-
-
-
-
-    
-
-
